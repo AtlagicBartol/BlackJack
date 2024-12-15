@@ -14,45 +14,45 @@
     
     <div class="table">
         <h2 id="dealer-text" class="hidden">Dealer: <span id="dealer-sum"></span></h2>
-    <div class="cards" class="hidden" id="dealer-cards">
-        <img id="hidden" src="../CardImages/BACK.png">
-    </div>
-
-    <h2 id="your-text" class="hidden">You: <span id="your-sum"></span></h2>
-
-    <div class="cards"  class="hidden" id="your-cards"></div>
-        <br>
-        
-        <button id="hit">Hit</button>
-        <button id="stay">Stay</button>
-
-        <p id="results"></p>
-
-        <div class="bet-button-container">
-            <img id="place5" src="../ChipImages/5EuroChip.jpg" alt="5 Euros" onclick="place5Euros()">
-            <img id="place5" src="../ChipImages/10EuroChip.jpg" alt="10 Euros" onclick="place10Euros()">
-            <img id="place5" src="../ChipImages/20EuroChip.jpg" alt="20 Euros" onclick="place20Euros()">
-            <img id="place5" src="../ChipImages/50EuroChip.jpg" alt="50 Euros" onclick="place50Euros()">
-        </div>       
-
-        <button id="placeBetbtn" alt="placeButton" onclick="placeBet()">Place bet</button>
-        <button id="resetbtn" alt="resetButton" onclick="resetBet()">Reset bet</button>
-        
-        <div class = "bettingArea">
-            <h3>BET : <span id="your-bet">0</span></h3>
-            <h3>COINS : <span id="your-coins"></span></h3>
+        <div class="cards" class="hidden" id="dealer-cards">
+            <img id="hidden" src="../CardImages/BACK.png">
         </div>
 
-        <div id="promo-code">
-            <button id="activateCodeBtn" onclick="enableCodeInput()">PROMO CODE</button>
-        </div>
+        <h2 id="your-text" class="hidden">You: <span id="your-sum"></span></h2>
 
-        <div id="modal" class="modal" onclick="closeModal(event)">
-            <div class="modal-content">
-                <input type="text" id="code" placeholder="Input your code here" disabled>
-                <button id="checkCodeBtn" onclick="checkCode()">CHECK YOUR CODE</button>
-                <a class = "link" href="../LinkToForms/LinkToForms.html">Popis anketa</a>
+        <div class="cards"  class="hidden" id="your-cards"></div>
+            <br>
+            
+            <button id="hit">Hit</button>
+            <button id="stay">Stay</button>
+
+            <p id="results"></p>
+
+            <div class="bet-button-container">
+                <img id="place5" src="../ChipImages/5EuroChip.jpg" alt="5 Euros" onclick="place5Euros()">
+                <img id="place5" src="../ChipImages/10EuroChip.jpg" alt="10 Euros" onclick="place10Euros()">
+                <img id="place5" src="../ChipImages/20EuroChip.jpg" alt="20 Euros" onclick="place20Euros()">
+                <img id="place5" src="../ChipImages/50EuroChip.jpg" alt="50 Euros" onclick="place50Euros()">
+            </div>       
+
+            <button id="placeBetbtn" alt="placeButton" onclick="placeBet()">Place bet</button>
+            <button id="resetbtn" alt="resetButton" onclick="resetBet()">Reset bet</button>
+            
+            <div class = "bettingArea">
+                <h3>BET : <span id="your-bet">0</span></h3>
+                <h3>COINS : <span id="your-coins"></span></h3>
             </div>
+
+            <div id="promo-code">
+                <button id="activateCodeBtn" onclick="enableCodeInput()">PROMO CODE</button>
+            </div>
+
+            <div id="modal" class="modal" onclick="closeModal(event)">
+                <div class="modal-content">
+                    <input type="text" id="code" placeholder="Input your code here" disabled>
+                    <button id="checkCodeBtn" onclick="checkCode()">CHECK YOUR CODE</button>
+                    <a class = "link" href="../LinkToForms/LinkToForms.html">Popis anketa</a>
+                </div>
         </div>
     </body>  
 </html>
