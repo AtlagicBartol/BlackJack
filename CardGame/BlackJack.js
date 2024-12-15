@@ -74,11 +74,11 @@ function startGame() {
         document.getElementById("your-cards").append(cardImg);
     }
 
-    if(reduceAce(yourSum, yourAceCount) == 21) stay();
     document.getElementById("dealer-sum").innerText = getValue(card);
     document.getElementById("your-sum").innerText = reduceAce(yourSum,yourAceCount);
     document.getElementById("hit").addEventListener("click", hit);
     document.getElementById("stay").addEventListener("click", stay);
+    if(reduceAce(yourSum, yourAceCount) == 21) stay();
 }
 
 function hit() {
