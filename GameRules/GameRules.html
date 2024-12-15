@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pravila Igre</title>
+    <link rel="stylesheet" href="GameRules.css">
+</head>
+<body>
+    <a href="../Home.html">
+        <img id="BackButton" src="../Images/BackButton.jpg" alt="povratak na pocetak">        
+    </a>
+    <div class="rules-container">
+        <div class="rules-box">
+            <h1>Pravila Igre</h1>
+            <br>
+            <p>
+                Pravila su jednostavna, igra je zanimljiva te ako se strateški dobro postavite veće su šanse da ćete pobjediti. <br>
+                <br>
+                Za prosječnog igrača tko razumije format igre, veće su šanse da će dobit nego sam diler. Iz tog razloga 
+                Blackjack je jedna od najatraktivnijh igara koja se može pronaći u svakom kasinu. Igra je popularnost stekla 
+                tijekom Prvog svjetskog rata, no nastala je u Francuskoj 1760-ih gdje se zvala Vingt-et-Un(21 na francuskom). 
+                Iako je igra jako popularna, pravila su na drugačijim mjestima različita, kako se igraju na ovoj stranici će biti
+                opisano u nastavku.
+                <br>
+                <h2 class  = "subtitle">Špil</h2>
+                Koristimo standardni špil koji se sastoji od 52 karte. Špil se na početku svake runde promješa sa algoritmom.
+                <br>
+                <h2 class = "subtitle">Kako pobjediti?</h2>
+                Igraču je cilj dobiti sumu karata što bliže 21, bez da prijeđe vrijednost 21.
+                <h2 class="TableSubtitle">Vrijednosti karata:</h2>
+                    <table class="card-values-table">
+                        <thead>
+                            <tr>
+                                <th>Vrijednost</th>
+                                <th>Karte</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>As(suma > 21)</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>10, Kralj, Dama, Dečko</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>As(suma <= 21)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p id = "textBenethTable"> Znak koji se nalazi uz samu kartu ne utječe na njenu vrijednost.</p> 
+
+                <h2 class = "subtitle">Postavljanje uloga</h2>
+                Prije početka igre igrač mora postaviti određeni ulog. Minimalni ulog koji se može postavi je žeton vrijednosti 5, maksimalnog uloga nema. Igrač ima pravo birati o ulaganju više različitih vrsta žetona
+                5, 10, 20, 50 te ima mogućnost koristiti kombinaciju tih žetona.
+                <h2 class = "subtitle">Početak igre</h2>
+                Kada je igrač postavio svoj ulog, igrač dobiva dvije karte koje obje vidljive igraču,
+                diler dobiva jednu kartu vidljivu igraču te drugu kartu okrenutu naopako koji igrač ne može očitati.
+                <h2 class = "subtitle">Tijek igre</h2>
+                Nakon što je dobio karte igrač bira želi li izvući novu kartu ili će prihvatiti ruku koju ima. Ukoliko je prešao sumu 21 automatski je izgubio i time gubi ulog.
+                Ukoliko je dobio karte vrijednosti 21 igrač završava sa vučenjem karata te je dilerov red za igru.
+                Kada je dilerov red on mora izvlačiti karte sve dok minimalno ne dobije vrijednost 17. Ukoliko diler prijeđe vrijednost 21 igrač dobiva duplu količinu od one koje je uložio.
+                Ukoliko su i diler i igrač prešli 21 igrač gubi svoj ulog. Ukoliko je suma karata od dilera i igrača jednaka igrač dobiva svoj ulog nazad.
+                <h2 class = "subtitle">Primjer osnovne strategije</h2>
+                Primjer osvnovne strategije u blackjacku je ta da se pogleda karta dilera, ukoliko je ta karta vrijednosti 7,8,9,10 ili as, igrač ne bi 
+                trebao prestati vući karte dok ne dođe minimalno do vrijednosti 17. Kada diler dobije jednu od karata nižih vrijednosti(4,5,6 ili manje),
+                igrač bi trebao vući karte dok ne dobije minimalno 12. Taktika ovdje je da igrač ne vuće karte gdje god ima šanse da ispadne iz igre te će diler morat zbog niske vrijednosti karte
+                izvlačiti više karata čime povećava šansu da izgubi.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
