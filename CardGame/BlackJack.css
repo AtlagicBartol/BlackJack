@@ -194,7 +194,8 @@ span {
 
 .table {
     border-radius: 10px; 
-    background-image: url('../Images/Table-picture.jpg'); 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('../Images/Table-picture.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 

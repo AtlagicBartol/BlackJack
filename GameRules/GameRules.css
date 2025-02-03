@@ -32,11 +32,11 @@ body {
     color: #333; 
     position: fixed;
     top: 25px; 
-    left: 50%; /* Centriranje */
-    transform: translateX(-50%); /* Poravnava po sredini horizontalno */
-    overflow-y: auto; /* Omogućuje unutarnji scroll ako je sadržaj duži */
+    left: 50%;
+    transform: translateX(-50%); 
+    overflow-y: auto;
     z-index: 100; 
-    font-size: 18px; /* Jednolika osnovna veličina teksta */
+    font-size: 18px;
 }
 
 .rules-box h1 {
