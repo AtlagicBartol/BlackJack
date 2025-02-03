@@ -76,8 +76,6 @@ function startGame() {
 
     document.getElementById("dealer-sum").innerText = getValue(card);
     document.getElementById("your-sum").innerText = reduceAce(yourSum,yourAceCount);
-    document.getElementById("hit").addEventListener("click", hit);
-    document.getElementById("stay").addEventListener("click", stay);
     if(reduceAce(yourSum, yourAceCount) == 21) stay();
 }
 
@@ -115,28 +113,24 @@ function stay() {
 
     let message = "";
     if (yourSum > 21) {
-        message = "You Lose!";
-        bet = 0;
+        message = "You lost " + bet + " coins!";
     }
     else if (dealerSum > 21) {
-        message = "You win!";
+        message = "You won " + 2 * bet + " coins!";
         coins += 2 * bet;
-        bet = 0;
     }
     else if (yourSum == dealerSum) {
         message = "Tie!";
         coins += bet;
-        bet = 0;
     }
     else if (yourSum > dealerSum) {
-        message = "You Win!";
+        message = "You won " + 2 * bet + " coins!";
         coins += 2*bet;
-        bet = 0;
     }
     else if (yourSum < dealerSum) {
-        message = "You Lose!";
-        bet = 0;
+        message =  "You lost " + bet + " coins!";
     }
+    bet = 0;
     betPlaced = false;
     hasPlayedAgain = false;
 
@@ -147,7 +141,7 @@ function stay() {
     document.getElementById("results").innerText = message;
 
     hideHitStayButtons();
-    CreateplayAgainButton();
+    CreatePlayAgainButton();
 }
 
 
@@ -182,48 +176,35 @@ function reduceAce(playerSum, playerAceCount) {
 
 function place5Euros(){
     if(!betPlaced && hasPlayedAgain){
-        if(coins >= 5){
-            coins -= 5;
-            bet += 5;
-            printBet();
-            }
-        else payUpAlert();
+        placeCoins(5)
     }
 }
 
 function place10Euros(){
     if(!betPlaced && hasPlayedAgain){
-        if(coins >= 10){
-            coins -= 10;
-            bet += 10;
-            printBet();
-        }
-        else payUpAlert();
+        placeCoins(10)
     }
 }
 
 function place20Euros(){
     if(!betPlaced && hasPlayedAgain){
-        if(coins >= 20){
-            coins -= 20;
-            bet += 20;
-            printBet();
-        }
-        else payUpAlert();
+        placeCoins(20)
     }
 }
 
 function place50Euros(){
     if(!betPlaced && hasPlayedAgain){
-        if(coins >= 50){
-            coins -= 50;
-            bet += 50;
-            printBet();
-        }
-        else{
-            payUpAlert();
-        }
+        placeCoins(50)
     }
+}
+
+function placeCoins(x){
+    if(coins >= x){
+        coins -= x;
+        bet += x;
+        printBet();
+    }
+    else payUpAlert();
 }
 
 function payUpAlert(){
@@ -280,7 +261,7 @@ function showBetButtons(){
 }
 
 
-function CreateplayAgainButton() {
+function CreatePlayAgainButton() {
     if (!createAgainButton) {
         createAgainButton = true;
         const playAgainButton = document.createElement("button");
@@ -301,10 +282,10 @@ function playAgain() {
 
         hasPlayedAgain = true;
 
-        document.querySelectorAll(".bet-buttons-container img").forEach(img => img.style.display = "inline-block");
         document.getElementById("hit").style.display = "inline-block";
         document.getElementById("stay").style.display = "inline-block";
         hideHitStayButtons();
+
         canHit = true;
         createAgainButton = false; 
         betPlaced = false; 
